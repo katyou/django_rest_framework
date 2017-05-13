@@ -1,10 +1,12 @@
-from django.conf.urls import include, url
+# coding: utf-8
+
+from django.conf.urls import url, include
 from django.contrib import admin
 
-urlpatterns = [
-    # Examples:
-    # url(r'^$', 'django_rest_framework_test.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+from blog.urls import router as blog_router
 
-    url(r'^admin/', include(admin.site.urls)),
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    # blog.urlsをincludeする
+    url(r'^api/', include(blog_router.urls)),
 ]

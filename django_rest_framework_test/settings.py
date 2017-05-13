@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    # 'rest_framework',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -90,7 +90,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
