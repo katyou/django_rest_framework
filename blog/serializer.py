@@ -13,3 +13,11 @@ class EntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = Entry
         fields = ('title', 'body', 'created_at', 'status', 'author')
+
+class EntrySerializer(serializers.ModelSerializer):
+    # authorのserializerを上書き
+    author = UserSerializer()
+
+    class Meta:
+        model = Entry
+        fields = ('title', 'body', 'created_at', 'status', 'author')
