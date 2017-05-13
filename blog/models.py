@@ -9,8 +9,7 @@ class User(models.Model):
       # 主キーとnameを表示させて見やすくする
       # ex) 1: Alice
       return "{}: {}".format(self.pk, self.name)
-
-__str__ = __repr__  # __str__にも同じ関数を適用
+    __str__ = __repr__  # __str__にも同じ関数を適用
 
 class Entry(models.Model):
   STATUS_DRAFT = "draft"
